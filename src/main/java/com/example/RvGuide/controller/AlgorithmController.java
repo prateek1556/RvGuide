@@ -21,7 +21,7 @@ import com.example.RvGuide.service.UserService;
 
 @Controller
 @RequestMapping("/algorithm")
-@SessionAttributes({"algoObj1","algoObj2"})
+//@SessionAttributes({"algoObj1","algoObj2"})
 public class AlgorithmController {
 	
 	@Autowired

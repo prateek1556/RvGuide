@@ -24,7 +24,7 @@
 		<br>
 		<a href="${pageContext.request.contextPath}/testprocessing">Test Processing</a>
 		<br>
-		<a href="${pageContext.request.contextPath}/Coronavirus">CoronaVirus Analysis</a>
+		<a href="${pageContext.request.contextPath}/coronavirus">CoronaVirus Analysis</a>
 		
 
 		<form:form action="${pageContext.request.contextPath}/logout" method="POST">

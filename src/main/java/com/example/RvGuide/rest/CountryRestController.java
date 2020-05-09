@@ -13,7 +13,7 @@ import com.example.RvGuide.bean.CountryBean;
 
 
 @RestController
-@RequestMapping("/myapp")
+@RequestMapping("/countryapi")
 public class CountryRestController {
 
 	@Autowired

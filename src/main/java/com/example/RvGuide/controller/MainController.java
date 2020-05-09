@@ -58,11 +58,4 @@ public class MainController {
 		return mvn;
 	}
 
-	@GetMapping("/Coronavirus")
-	public ModelAndView coconaVirus() {
-		ModelAndView mvn = new ModelAndView();
-		mvn.setViewName("coronavirus");
-		return mvn;
-	}
-
 }

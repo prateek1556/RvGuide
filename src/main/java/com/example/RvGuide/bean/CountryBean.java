@@ -2,11 +2,11 @@ package com.example.RvGuide.bean;
 
 public class CountryBean {
 
-	String name;
-	String alpha3Code;
-	String capital;
-	String region;
-	String flag;
+	private String name;
+	private String alpha3Code;
+	private String capital;
+	private String region;
+	private String flag;
 
 	public String getName() {
 		return name;
