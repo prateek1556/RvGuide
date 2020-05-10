@@ -1,5 +1,7 @@
 package com.example.RvGuide.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.RvGuide.bean.CoronaWorldTotalBean;
+import com.example.RvGuide.bean.Countries;
 import com.example.RvGuide.service.CoronaService;
 
 @Controller
@@ -22,7 +25,9 @@ public class CoronaController {
 		ModelAndView mvn = new ModelAndView();
 		
 		CoronaWorldTotalBean bean = coronaService.getCoronaWorldTotal();
-		System.out.println("Bean --->"+bean);
+		List<Countries> country_list = coronaService.getCoronaCountry();
+		
+		mvn.addObject("list",country_list);
 		mvn.addObject("corona",bean);
 		System.out.println("Showing page");
 		mvn.setViewName("CoronaVirus");
