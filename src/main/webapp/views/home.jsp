@@ -12,7 +12,7 @@
 	<h1>Welcome Home ${firstName}</h1>
 
 		<h1>${email}</h1>
-		<img src="${countryImg}" alt="" width="4%" height="4%">
+		<img src="${countryImg}" alt="" width="6%" height="6%">
 		<br>
 		<a href="${pageContext.request.contextPath}/practicecode">Practice Code</a>
 		<br>

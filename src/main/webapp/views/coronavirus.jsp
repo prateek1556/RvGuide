@@ -50,7 +50,7 @@
 		<tbody>
 			<c:forEach var="var" items= "${list}" >
 				<tr>
-					<td>${var.country}</td>
+					<td><a href="${pageContext.request.contextPath}/coronavirus/${var.country}">${var.country}</a></td>
 					<td>${var.totalConfirmed}</td>
 					<td>${var.totalDeaths}</td>
 					<td>${var.totalRecovered}</td>
