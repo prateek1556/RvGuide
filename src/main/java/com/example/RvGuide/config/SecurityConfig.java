@@ -49,6 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/registration").permitAll()//registration
 				.antMatchers("/coronaapi/**").permitAll()
 				.antMatchers("/countryapi/**").permitAll()
+				.antMatchers("/textprocessingapi/**").permitAll()
 				.antMatchers("/algorithm/**").hasAnyAuthority("SUPER_USER", "ADMIN_USER", "SITE_USER")
 				.antMatchers("/home/**").hasAnyAuthority("SUPER_USER", "ADMIN_USER", "SITE_USER")
 				.antMatchers("/coronavirus/**").hasAnyAuthority("SUPER_USER", "ADMIN_USER", "SITE_USER")//Coronavirus
