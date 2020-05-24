@@ -24,17 +24,17 @@ public class TextProcessingRestController implements CommandLineRunner {
 	public static final String REST_TEXT_PROCESS = "http://127.0.0.1:5000/cleandata";
 	
 	@PostMapping(value="/cleandata")
-	public String getCleanData(){
+	public String getCleanData(String text){
 		System.out.println("Inside getCleanData");
-		String text="nd scale.#$@#$[5]Observed temperature from NASA[6]"
-				+ " vs the 1850–1900 average used by "
-				+ "the IPCC as a pre-industrial baseline.[7] "
-				+ "The primary driver for increased global temperatures "
-				+ "in the industrial era is human activity, with natural "
-				+ "forces adding variability.[8]The Intergovernmental "
-				+ "Panel on Climate Change (IPCC) concluded that human influence "
-				+ "on climate has been the dominant cause of observed warming since "
-				+ "the mid-20th century .[9] These";
+//		String text="nd scale.#$@#$[5]Observed temperature from NASA[6]"
+//				+ " vs the 1850–1900 average used by "
+//				+ "the IPCC as a pre-industrial baseline.[7] "
+//				+ "The primary driver for increased global temperatures "
+//				+ "in the industrial era2365*^&(* is human activity, with natural "
+//				+ "forces adding variability.[8]The Intergovernmental "
+//				+ "Panel on Climate Change (IPCC) concluded that human influence "
+//				+ "on climate has been the dominant cause of observed warming since "
+//				+ "the mid-20th century .[9] These";
 		
 		System.out.println("Print original data -> "+ text);
 		HttpHeaders headers = new HttpHeaders();
@@ -50,12 +50,12 @@ public class TextProcessingRestController implements CommandLineRunner {
 		System.out.println("Printing Clean Text"+gettext.getText());
 		
 		
-		return null;
+		return gettext.getText();
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		getCleanData();
+		//getCleanData(null);
 		
 	}
 

@@ -1,0 +1,9 @@
+Drop TABLE IF EXISTS user_algorithm;
+
+CREATE TABLE user_algorithm(
+   algorithm_id int(11) NOT NULL AUTO_INCREMENT,
+   email varchar(255) NOT NULL,
+   algorithm_title varchar(255) NOT NULL,
+   algorithm_data varchar(50000) DEFAULT NULL,
+   PRIMARY KEY (algorithm_id)
+);

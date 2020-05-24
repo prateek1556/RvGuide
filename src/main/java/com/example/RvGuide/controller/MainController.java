@@ -51,11 +51,6 @@ public class MainController {
 		return mvn;
 	}
 
-	@GetMapping("/testprocessing")
-	public ModelAndView textProcessing() {
-		ModelAndView mvn = new ModelAndView();
-		mvn.setViewName("testprocessing");
-		return mvn;
-	}
+	
 
 }
