@@ -1,7 +1,9 @@
 package com.example.RvGuide.service;
 
+import com.example.RvGuide.bean.TextProcessingBean;
+
 public interface TextProcessingService {
 
-	public String getCleanData(String txt);
+	public TextProcessingBean getCleanData(String txt);
 	
 }

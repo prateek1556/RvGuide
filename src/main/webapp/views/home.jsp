@@ -22,7 +22,7 @@
 		<br>
 		<a href="${pageContext.request.contextPath}/machinelearning">Machine Learning</a>
 		<br>
-		<a href="${pageContext.request.contextPath}/testprocessing">Test Processing</a>
+		<a href="${pageContext.request.contextPath}/textprocessing">Test Processing</a>
 		<br>
 		<a href="${pageContext.request.contextPath}/coronavirus">CoronaVirus Analysis</a>
 		

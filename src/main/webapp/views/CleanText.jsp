@@ -9,6 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	${cleantxt}
+	<br>
+	Review of the User       :     ${review}<br>
+	Sentiment of that Review :     ${sentiment}<br>
 </body>
 </html>

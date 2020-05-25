@@ -3,6 +3,7 @@ package com.example.RvGuide.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.RvGuide.bean.TextProcessingBean;
 import com.example.RvGuide.dao.TextProcessingDao;
 
 @Service
@@ -12,7 +13,7 @@ public class TextProcessingServiceImpl implements TextProcessingService {
 	TextProcessingDao dao;
 	
 	@Override
-	public String getCleanData(String txt) {
+	public TextProcessingBean getCleanData(String txt) {
 		return dao.getCleanData(txt);
 	}
 
