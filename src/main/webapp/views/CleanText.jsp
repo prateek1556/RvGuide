@@ -11,6 +11,6 @@
 <body>
 	<br>
 	Review of the User       :     ${review}<br>
-	Sentiment of that Review :     ${sentiment}<br>
+<%-- 	Sentiment of that Review :     ${sentiment}<br> --%>
 </body>
 </html>

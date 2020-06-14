@@ -84,10 +84,15 @@ public class AlgorithmController {
 	
 	@PostMapping(path = {"/updatealgorithm/{id}"})
 	public ModelAndView updateAlgorithm(@ModelAttribute("algoObj2") AlgorithmBean algorithmBean ,@PathVariable("id") int id){
+		System.out.println("Inside update");
 		ModelAndView mvn = new ModelAndView("UpdateAlgorithm");
+		System.out.println("Controller ID --->"+id);
+		algorithmBean.setAlgorithm_id(id);
 		algoService.updateAlgorithm(algorithmBean);
+		System.out.println("Complete going outside");
 		mvn.addObject("SuccessMessage","Algorithm has been updated");
 		mvn.setViewName("UpdateAlgorithmSuccess");
+		System.out.println("Returning");
 		return mvn;
 	}
 	
@@ -104,6 +109,7 @@ public class AlgorithmController {
 	@PostMapping(path = {"/deletealgorithm/{id}"})
 	public ModelAndView deleteAlgorithm(@ModelAttribute("algoObj2") AlgorithmBean algorithmBean ,@PathVariable("id") int id){
 		ModelAndView mvn = new ModelAndView();
+		algorithmBean.setAlgorithm_id(id);
 		algoService.deleteAlgorithm(algorithmBean);
 		mvn.addObject("SuccessMessage","Algorithm has been deteted");
 		mvn.setViewName("DeleteAlgorithmSuccess");

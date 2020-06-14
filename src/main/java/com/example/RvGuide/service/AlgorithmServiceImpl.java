@@ -26,10 +26,13 @@ public class AlgorithmServiceImpl implements AlgorithmService {
 
 	@Override
 	public void updateAlgorithm(AlgorithmBean algorithmBean) {
+		System.out.println("Inside update updateAlgorithm");
+		System.out.println("ID-----------> "+algorithmBean.getAlgorithm_id());
 		AlgorithmEntity algorithmEntity = algorithmRepository.getAlgorithmbyId(algorithmBean.getAlgorithm_id());
 		algorithmEntity.setAlgorithm_data(algorithmBean.getAlgorithm_data());
 		algorithmEntity.setTitle(algorithmBean.getTitle());
 		algorithmRepository.save(algorithmEntity);
+		System.out.println("going out update updateAlgorithm");
 	}
 
 	@Override
@@ -50,14 +53,17 @@ public class AlgorithmServiceImpl implements AlgorithmService {
 
 	@Override
 	public AlgorithmBean getAlgorithmById(int id) {
+		System.out.println("Inside getAlgorithmById");
 		AlgorithmEntity entity = algorithmRepository.getAlgorithmbyId(id);
 		AlgorithmBean bean = new AlgorithmBean();
 		BeanUtils.copyProperties(entity, bean);
+		System.out.println("Returning getAlgorithmById");
 		return bean;
 	}
 
 	@Override
 	public void deleteAlgorithm(AlgorithmBean algorithmBean) {
+		System.out.println("Deleting ID ---->  "+algorithmBean.getAlgorithm_id());
 		AlgorithmEntity algorithmEntity = new AlgorithmEntity();
 		BeanUtils.copyProperties(algorithmBean, algorithmEntity);
 		algorithmRepository.delete(algorithmEntity);
